@@ -17,11 +17,8 @@ from ncr_lookup import load_ncr, get_location
 # Load NCR GeoJSON data
 features = load_ncr("ncr_barangays_geojson.geojson")
 
-# Lookup coordinates
-lat, lon = 14.6091, 120.9890
-result = get_location(lat, lon, features)
+# How it is used
+result = get_location(14.6091, 120.9890, features)
 
-if result:
-    print(f"Barangay: {result['barangay']}, City: {result['city']}")
-else:
-    print("Coordinates are outside NCR")
+# Result
+"Barangay: {result['barangay']}, City: {result['city']}"
