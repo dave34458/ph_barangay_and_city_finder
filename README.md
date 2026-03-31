@@ -18,7 +18,7 @@ from ncr_lookup import load_ncr, get_location
 features = load_ncr("ncr_barangays_geojson.geojson")
 
 # How it is used
-result = get_location(14.6091, 120.9890, features)
+result = get_location(14.531659172292766,121.0736745605332, features)
 
 # Result
-"Barangay: {result['barangay']}, City: {result['city']}"
+{'barangay': 'Tuktukan', 'city': 'Taguig'}
