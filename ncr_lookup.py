@@ -53,6 +53,7 @@ def load_ncr(path=None):
     return [
         (feat["geometry"], feat["properties"].get("adm4_en"), feat["properties"].get("city"))
         for feat in gj["features"]
+        if feat["properties"].get("adm4_en") is not None
     ]
 
 def get_location(lat, lon, features):
